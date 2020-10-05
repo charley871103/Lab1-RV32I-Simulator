@@ -14,7 +14,7 @@ main:
 
 		# Exit program
 		li   a7, 10
-        ecall
+                ecall
 
 Loopi:
 		addi t1, t1, 1     # i++
@@ -35,31 +35,31 @@ Loopj:
 		sw   t6, 4(s1)     # data[j+1] = data[j]
 		sw   t3, 0(s1)     # data[j] = temp
 		addi t2, t2, -1    # j--
-		j Loopj
+		j    Loopj
 
 print:
 		la   a0, str1
-        li   a7, 4
-        ecall
+                li   a7, 4
+                ecall
 		lw   t0, 0(s0)
 		mv   a0, t0
 		li   a7, 1
-    	ecall
+    	        ecall
 		lw   t0, 4(s0)
 		mv   a0, t0
 		li   a7, 1
-    	ecall
+    	        ecall
 		lw   t0, 8(s0)
 		mv   a0, t0
 		li   a7, 1
-    	ecall
+    	        ecall
 		lw   t0, 12(s0)
 		mv   a0, t0
 		li   a7, 1
-    	ecall
+    	        ecall
 		lw   t0, 16(s0)
 		mv   a0, t0
 		li   a7, 1
-    	ecall
+    	        ecall
 		ret
 		
